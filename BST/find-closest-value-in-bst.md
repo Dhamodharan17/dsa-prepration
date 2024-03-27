@@ -26,3 +26,69 @@ class Program {
   }
 }
 ```
+**Solution 1 - Recursive Apporach** 
+- use bst property
+- choose closest comparing difference
+```
+import java.util.*;
+
+class Program {
+
+  public static int findClosestValueInBst(BST tree, int target) {
+    return findClosestValueInBst(tree,target,tree.value);
+  }
+
+  public static int findClosestValueInBst(BST tree,int target,int closest){
+
+    // Choose closest by comparing difference
+    if(Math.abs(target-closest)>Math.abs(target-tree.value)){
+      closest = tree.value;
+    }
+    // Less value go left side
+    if(target < tree.value && tree.left != null){
+      return findClosestValueInBst(tree.left,target,closest);
+    // More value go right side
+    }else if(target > tree.value && tree.right != null){
+      return findClosestValueInBst(tree.right,target,closest);
+    }else{
+      return closest;
+    }
+    
+  }
+
+}
+```
+**Solution 2 - Iterative Apporach**
+- choose the closest
+```
+import java.util.*;
+
+class Program {
+  public static int findClosestValueInBst(BST tree, int target) {
+    // Write your code here.
+    return findClosestValueInBst(tree,target,tree.value);
+  }
+    public static int findClosestValueInBst(BST tree, int target,int closest) {
+
+      BST currentNode = tree;
+
+      // Anyway we are going to traverse one part of the tree
+      while(currentNode != null){
+        // Choose the closest
+        if(Math.abs(target-closest)>Math.abs(target-currentNode.value)){
+          closest = currentNode.value;
+        }
+        if(target<currentNode.value){
+          currentNode = currentNode.left;
+        } else if(target>currentNode.value){
+          currentNode = currentNode.right;
+        }else{
+          break;
+        }
+      }
+  return closest;
+    
+  }
+ 
+}
+```
