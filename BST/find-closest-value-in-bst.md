@@ -29,6 +29,7 @@ class Program {
 **Solution 1 - Recursive Apporach** 
 - use bst property
 - choose closest comparing difference
+- paramterise the value that need to be carried all over the recursion
 ```
 import java.util.*;
 
