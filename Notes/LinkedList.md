@@ -160,4 +160,15 @@
     }
 ```
 ### b.Recursive Approach
+```
+ public static Node reverseRecurLL(Node cur,Node prev) {
 
+        if(cur == null)
+            return prev;
+
+        Node next = cur.next;
+        cur.next = prev;
+
+        return reverseRecurLL(next,cur);
+    }
+```
