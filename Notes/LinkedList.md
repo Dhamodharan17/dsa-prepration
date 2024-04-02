@@ -26,9 +26,8 @@
 - Deletion 
 - Search
 - Reverse
-
+    
 ## Insertion in linkedlist
-
 ### a.Create Linkedlist / Add at end
 
 ```
@@ -97,6 +96,20 @@
 
     }
 ```
+## Traversal in linkedlist
+### Iterative Traversal
+
+```
+  public static void traverseLL(Node node){
+        while (node!=null){
+            System.out.println(node.data);
+            node = node.next;
+        }
+    }
+```
+
+
+
 ## Traversal in Linkedlist
 
 ### a. Iterative
