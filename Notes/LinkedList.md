@@ -97,3 +97,6 @@
 
     }
 ```
+## Traversal in Linkedlist
+
+### a. Iterative
