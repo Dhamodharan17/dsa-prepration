@@ -172,3 +172,23 @@
         return reverseRecurLL(next,cur);
     }
 ```
+## Get Kth Node
+
+```
+  public static Node getTheKthNode(Node node, int k) {
+        if (node == null)
+            return null;
+        if (k == 0)
+            return node;
+        return getTheKthNode(node.next, k-1);
+    }
+```
+## Get Kth Node from end
+**Approach 1** 
+- find the length of the LL
+- iterate again to n-k+1 th node from start
+- 2 traversal
+**Approach 2**
+  - Slow and Faster Pointer
+  - first move fast pointer by k steps
+  - then move slow and fast together, at end slow pointer will be at n-k+1 th position
