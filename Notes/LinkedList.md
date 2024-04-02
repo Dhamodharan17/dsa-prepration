@@ -108,8 +108,15 @@
     }
 ```
 
+### Recursive Traversal
 
+```
+  public static void traverseRecur(Node node) {
 
-## Traversal in Linkedlist
+        if (node == null)
+            return;
 
-### a. Iterative
+        System.out.println(node.data);
+        traverseRecur(node.next);
+    }
+```
