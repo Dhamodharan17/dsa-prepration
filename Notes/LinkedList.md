@@ -97,7 +97,7 @@
     }
 ```
 ## Traversal in linkedlist
-### Iterative Traversal
+### a.Iterative Traversal
 
 ```
   public static void traverseLL(Node node){
@@ -108,7 +108,7 @@
     }
 ```
 
-### Recursive Traversal
+### b.Recursive Traversal
 
 ```
   public static void traverseRecur(Node node) {
@@ -139,5 +139,23 @@
             // Edge case : head node delete
             head=head.next;
         }
+    }
+```
+## Reverse LinkedList
+
+```
+   public static void reverseLL(){
+
+        Node cur = head;
+        Node prev = null;
+
+        while (cur != null){
+            Node next = cur.next;
+            cur.next = prev;//logic
+            prev = cur;
+            cur = next;
+        }
+
+        head=prev;
     }
 ```
