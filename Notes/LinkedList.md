@@ -142,7 +142,7 @@
     }
 ```
 ## Reverse LinkedList
-
+### a.Iterative Approach
 ```
    public static void reverseLL(){
 
@@ -159,3 +159,5 @@
         head=prev;
     }
 ```
+### b.Recursive Approach
+
