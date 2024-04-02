@@ -120,3 +120,24 @@
         traverseRecur(node.next);
     }
 ```
+## Delete in Linkedlist
+
+```
+ public static void deleteNodeLL(int node) {
+        // Logic : skip the node to be deleted.
+
+        // search the node to delete
+        Node cur = head;
+        Node prev = null;
+        while (cur != null && cur.data != node) {
+            prev = cur;
+            cur = cur.next;
+        }
+        if (prev != null) {
+            prev.next = cur.next;
+        } else {
+            // Edge case : head node delete
+            head=head.next;
+        }
+    }
+```
